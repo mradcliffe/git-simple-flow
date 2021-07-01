@@ -1,0 +1,9 @@
+/.idea/
+/nbproject/
+/.vs/
+/.vscode/
+.DS_Store
+Thumbs.db
+/node_modules/
+/dist
+/tmp
