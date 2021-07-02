@@ -1,0 +1,54 @@
+extends:
+  - eslint-config-airbnb
+  - plugin:react/recommended
+  - plugin:@typescript-eslint/recommended
+
+root: true
+
+env:
+  browser: true
+  es6: true
+  node: true
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+    ecmaVersion: 2018
+    sourceType: module
+    project: ./tsconfig.json
+
+settings:
+  react:
+    version: detect
+  import/resolver:
+    node:
+      moduleDirectory:
+        - node_modules
+        - src
+      extensions:
+        - .js
+        - .jsx
+        - .ts
+        - .tsx
+
+rules:
+  no-underscore-dangle:
+    - 0
+  no-use-before-define:
+    - 0
+  '@typescript-eslint/no-use-before-define':
+    - 1
+  max-len:
+    - 1
+    - 120
+  max-nested-callbacks:
+    - 1
+    - 4
+  camelcase:
+    - 1
+  react/jsx-filename-extension:
+    - 0
+  react/prefer-stateless-function:
+    - 1
+  import/extensions:
+    - 0
