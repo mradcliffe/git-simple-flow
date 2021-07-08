@@ -43,6 +43,7 @@ const simpleFlow = (graph: GitgraphUserApi<any>): GitgraphUserApi<any> => {
   // Release 2 doesn't include zbp0007 hot fix yet.
   const release2 = development.branch('release/2021-09-10').commit();
 
+  // Comment these lines out to show regressions.
   development.merge(main);
   release2.merge(development);
   main.merge(release2, 'Merges release/2021-09-10 into origin/main');
